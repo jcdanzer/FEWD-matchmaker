@@ -18,3 +18,11 @@ header h1 {
 .one ul li {
   display: inline-block;
 }
+
+.two {
+  width: 100%;
+  position: relative;
+  padding-top: 10%;
+
+
+}
