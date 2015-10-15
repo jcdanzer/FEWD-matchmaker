@@ -1,0 +1,1 @@
+var TeamPage = function(list)
