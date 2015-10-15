@@ -1,9 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<html lang="en-us">
+<head>
+  <title> Startup Matchmaker </title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/login.css">
+<!-- <link rel="stylesheet" href="/comps/normalize.css">
+  <link rel="stylesheet" href="/comps/reset.css"> -->
+<body>
+  <header>
+    <h1> Startup Matchmaker </h1>
+  </header>
+  <form id="form_id" method="post" name="myform">
+
+  <input type="text" name="username" id="username" placeholder="Username"/>
+
+  <input type="password" name="password" id="password" placeholder="password"/>
+  <input type="button" value="Login" id="submit" onclick="validate()"/>
+  </form>
+
+
+    <script language="javascript">
+function check(form)/*function to check userid & password*/
+{
+ /*the following code checkes whether the entered userid and password are matching*/
+ if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
+  {
+    window.open('target.html')/*opens the target page while Id & password matches*/
+  }
+ else
+ {
+   alert("Error Password or Username")/*displays error message*/
+  }
+}
+</script>
+<h2>login</h2>
+<h3>Dont have an account?</h3>
+<footer>
+  &copy 2015 Startup Matchmaker. Made in LA.
+</footer>
 
 
 
 
-
+</body>
 </html>
