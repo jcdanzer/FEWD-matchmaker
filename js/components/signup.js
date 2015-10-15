@@ -2,14 +2,27 @@
 
 function getFormValues(form){
 
-var avatar = form.avatar.value
-var email = form.email.value
-var username = form.username.value
-var password = form.password.value
-var firstName = form.firstName.value
-var lastName = form.lastName.value
+var avatar = form.avatar.value;
+var email = form.email.value;
+var username = form.username.value;
+var password = form.password.value;
+var firstName = form.firstName.value;
+var lastName = form.lastName.value;
 
-console.log(avatar, email, username, password, firstName, lastName)
+console.log(avatar, email, username, password, firstName, lastName);
+
+
+  var newuser = {
+    avatar: avatar,
+    email: email,
+    username: username,
+    password: password,
+    lastName: lastName,
+    firstName: firstName
+ };
+
+ console.log(newuser);
+
 }
   // var avatar = document.getElementById("avatar").value;
   // var email = document.getElementById("email").value;
@@ -20,19 +33,10 @@ console.log(avatar, email, username, password, firstName, lastName)
 
 
 
- //  var options = {
- //    avatar: avatar,
- //    email: email,
- //    username: username,
- //    password: password,
- //    lastName: lastname,
- //    firstName: firstname
- //
- //  };
  //
  //  var http = new xhrHandler();
  //
- //  //var req = http.request(function("POST", "http://vvvvvv.club/api", "options"));
+ //  //var req = http.request(function("POST", "http://vvvvvv.club/api", "pushnewuser"));
  //
  //  req(function success(){
  //
