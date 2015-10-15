@@ -12,7 +12,7 @@ console.log("passed to .js!")
 
   var options = {
     email: email,
-    
+
   };
 
   var http = new xhrHandler();

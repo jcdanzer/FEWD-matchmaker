@@ -29,6 +29,10 @@ h1 {
 h2 {
   font-color: #DCE0D9;
   font-family: 'open sans';
+  position: relative;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
 
 }
 ]
