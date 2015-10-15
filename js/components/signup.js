@@ -13,7 +13,9 @@ console.log(avatar, email, username, password, firstName, lastName);
 
 
   var newuser = {
-    avatar: avatar,
+    avatar: {
+      image:null
+    },
     email: email,
     username: username,
     password: password,
@@ -32,14 +34,14 @@ console.log(avatar, email, username, password, firstName, lastName);
   // var last = document.getElementById("lastName").value;
 
 
+// SEND TO API
 
- //
- //  var http = new xhrHandler();
- //
- //  //var req = http.request(function("POST", "http://vvvvvv.club/api", "pushnewuser"));
- //
- //  req(function success(){
- //
- //  }, function error(){
- //
- // })
+var http = new xhrHandler();
+
+ var req = http.request(function("POST", "http://vvvvvv.club/api", newuser));
+
+ req(function success(){
+
+  }, function error(){
+
+ })
