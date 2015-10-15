@@ -21,6 +21,7 @@ xhrHandler.prototype.request = function(verb, path, options){
       // opens the request and sets headers
       xhr.open(verb, path, true);
       xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.withCredentials = true;
 
       // handle changes in the response.
       xhr.onreadystatechange = function() {

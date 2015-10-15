@@ -1,4 +1,4 @@
-// javascript page
+// THIS IS THE NEWEST VERSION AT 9:03
 
 function getFormValues(form){
 
@@ -26,6 +26,23 @@ console.log(avatar, email, username, password, firstName, lastName);
  console.log(newuser);
 
 }
+
+function previewFile() {
+  var preview = document.querySelector('avatar');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.onloadend = function () {
+    preview.src = reader.result;
+  }
+
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
+}
+
   // var avatar = document.getElementById("avatar").value;
   // var email = document.getElementById("email").value;
   // var user = document.getElementById("username").value;
@@ -36,12 +53,12 @@ console.log(avatar, email, username, password, firstName, lastName);
 
 // SEND TO API
 
-var http = new xhrHandler();
-
- var req = http.request(function("POST", "http://vvvvvv.club/api", newuser));
-
- req(function success(){
-
-  }, function error(){
-
- })
+ //  var http = new xhrHandler();
+ //
+ //  var req = http.request(function("POST", "http://vvvvvv.club/api", newuser));
+ //
+ //  req(function success(){
+ //
+ //  }, function error(){
+ //
+ // })
