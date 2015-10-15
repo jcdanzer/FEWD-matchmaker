@@ -19,15 +19,15 @@
 		<div class="container">
 			<div class="main" >
 		<header><h2>Startup Matchmaker</h2></header>
-			<form action="" method="post">
+			<form name="newuser" action="" method="get">
 					<fieldset>
 <p>	avatar: <input type="file" name="avatar" value="get file" size="25" maxlength="50" /></p>
 <p> <input type="text" onfocus="if (this.value=='email') this.value = ''" type="text" value="email"name="email" size="25" maxlength="50" /></p>
 <p> <input type="text" onfocus="if (this.value=='user name') this.value = ''" type="text" value="user name"name="username" value="admin" size="25" maxlength="50" /></p>
 <p>	<input type="password" onfocus="if (this.value=='password') this.value = ''" type="text" value="password"name="password" value="" size="25" maxlength="50" /></p>
 <p>	<input type="text" onfocus="if (this.value=='first name') this.value = ''" type="text" value="first name"name="firstName" value="" size="25" maxlength="50" /></p>
-<p>	<input type="text" onfocus="if (this.value=='last name') this.value = ''" type="text" value="last name"name="lastLame" value="" size="25" maxlength="50" /></p>
-<p> <input type="submit" name="submit" value="create user" onclick="getFormValues()"/></p>
+<p>	<input type="text" onfocus="if (this.value=='last name') this.value = ''" type="text" value="last name"name="lastName" value="" size="25" maxlength="50" /></p>
+<p> <input type="submit" name="submit" value="Create User" onclick="getFormValues(this.form)"/></p>
 					</fieldset>
 </form>
 </div>

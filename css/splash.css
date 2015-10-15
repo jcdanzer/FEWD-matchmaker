@@ -1,0 +1,28 @@
+
+body {
+  font: #FFFFFF;
+  font-family: 'open sans';
+}
+
+header h1 {
+  color: #BC261D;
+  font-size: 20px;
+}
+
+.one {
+  float: right;
+  width: 30%;
+  position: relative;
+}
+
+.one ul li {
+  display: inline-block;
+}
+
+.two {
+  width: 100%;
+  position: relative;
+  padding-top: 10%;
+
+
+}
