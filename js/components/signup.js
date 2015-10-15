@@ -2,16 +2,16 @@
 
 function getFormValues(form){
 
-var avatar = form.avatar.value;
 var email = form.email.value;
 var username = form.username.value;
 var password = form.password.value;
 var firstName = form.firstName.value;
 var lastName = form.lastName.value;
 
-console.log(avatar, email, username, password, firstName, lastName);
+console.log(email, username, password, firstName, lastName);
 
 
+<<<<<<< HEAD
   var newuser = {
     avatar: {
       image:null
@@ -27,9 +27,45 @@ console.log(avatar, email, username, password, firstName, lastName);
     firstName: firstName
  };
 >>>>>>> master
+=======
+}
 
- console.log(newuser);
+function previewFile() {
+  var preview = document.querySelector('img');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
 
+  reader.onloadend = function (ev) {
+    preview.src = reader.result;
+    console.log(reader.result);
+
+  }
+
+    if (file) {
+    //  var avatarimage = reader.readAsDataURL(file);
+      reader.readAsDataURL(file);
+    } else {
+      preview.src = "";
+    }
+
+
+// var newuser = {
+//   avatar: {
+//     image:reader.result
+//   },
+//   email: email,
+//   username: username,
+//   password: password,
+//   lastName: lastName,
+//   firstName: firstName
+// }
+// console.log(newuser);
+};
+
+>>>>>>> master
+
+
+<<<<<<< HEAD
 }
 
 function previewFile() {
@@ -48,6 +84,8 @@ function previewFile() {
   }
 }
 
+=======
+>>>>>>> master
   // var avatar = document.getElementById("avatar").value;
   // var email = document.getElementById("email").value;
   // var user = document.getElementById("username").value;
