@@ -9,6 +9,11 @@ header h1 {
   font-size: 20px;
 }
 
+#triangle {
+  background-image: url("../images/pattern_matchmaker.svg");
+  background-repeat: no-repeat;
+}
+
 .one {
   float: right;
   width: 30%;
@@ -26,3 +31,17 @@ header h1 {
 
 
 }
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
