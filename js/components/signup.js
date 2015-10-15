@@ -1,28 +1,52 @@
 // javascript page
 
-function postit(){
+function getFormValues(form){
 
-console.log("passed to .js!")
+var avatar = form.avatar.value;
+var email = form.email.value;
+var username = form.username.value;
+var password = form.password.value;
+var firstName = form.firstName.value;
+var lastName = form.lastName.value;
 
-  var email = document.getElementById("email").value;
-  var user = document.getElementById("user").value;
-  var pass = document.getElementById("pass").value;
-  var first = document.getElementById("first").value;
-  var last = document.getElementById("last").value;
+console.log(avatar, email, username, password, firstName, lastName);
 
-  var options = {
+
+  var newuser = {
+    avatar: {
+      image:null
+    },
     email: email,
+<<<<<<< HEAD
 
   };
+=======
+    username: username,
+    password: password,
+    lastName: lastName,
+    firstName: firstName
+ };
+>>>>>>> master
 
-  var http = new xhrHandler();
+ console.log(newuser);
 
-  var req = http.request(function("POST", "URL", );
+}
+  // var avatar = document.getElementById("avatar").value;
+  // var email = document.getElementById("email").value;
+  // var user = document.getElementById("username").value;
+  // var pass = document.getElementById("password").value;
+  // var first = document.getElementById("firstName").value;
+  // var last = document.getElementById("lastName").value;
 
-  req(function success(){
+
+// SEND TO API
+
+var http = new xhrHandler();
+
+ var req = http.request(function("POST", "http://vvvvvv.club/api", newuser));
+
+ req(function success(){
 
   }, function error(){
 
-  })
-
-}
+ })
