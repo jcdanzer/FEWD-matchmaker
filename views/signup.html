@@ -1,3 +1,5 @@
+<!-- THIS IS THE NEWEST VERSION AT 9:03 -->
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -9,31 +11,34 @@
 
 		<!-- external CSS link -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/style.css">
-		<script src="js/signup.js"></script>
-
-
+		<link rel="stylesheet" href="/css/reset.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<script src="/js/components/signup.js"></script>
 	</head>
+
+
 	<body>
 		<div class="container">
-			<div class="main">
+			<div class="main" >
 		<header><h2>Startup Matchmaker</h2></header>
-			<form action="" method="post">
-    email address: <input type="text" name="email" value="" size="25" maxlength="50" />
-    user name: <input type="text" name="user" value="admin" size="25" maxlength="50" />
-		password: <input type="password" name="pass" value="" size="25" maxlength="50" />
-		first name: <input type="text" name="first" value="" size="25" maxlength="50" />
-		last name: <input type="text" name="last" value="" size="25" maxlength="50" />
-    <input type="submit" name="submit" value="create user" onclick="postit()"/>
+			<form name="newuser" action="" method="get">
+
+				<fieldset>
+<p>	avatar: <input tabindex="0"type="file" name="avatar" onchange="previewFile()" value="get file" size="25" maxlength="50" /></p>
+<p> <input tabindex="1" type="text" onfocus="if (this.value=='email') this.value = ''" type="email" value="email"name="email" size="25" maxlength="50" /></p>
+<p> <input tabindex="2" type="text" onfocus="if (this.value=='user name') this.value = ''" type="text" value="user name"name="username" size="25" maxlength="50" /></p>
+<p>	<input tabindex="3" type="password" onfocus="if (this.value=='password') this.value = ''" type="text" value="password"name="password" size="25" maxlength="50" /></p>
+<p>	<input tabindex="4" type="text" onfocus="if (this.value=='first name') this.value = ''" type="text" value="first name"name="firstName" size="25" maxlength="50" /></p>
+<p>	<input tabindex="5" type="text" onfocus="if (this.value=='last name') this.value = ''" type="text" value="last name"name="lastName" size="25" maxlength="50" /></p>
+<p> <input tabindex="6" type="submit" name="submit" value="Create User" onclick="getFormValues(this.form)"/></p>
+				</fieldset>
 </form>
 </div>
 </div>
 
 <div><a href="#"> Already have an account?</a></div>
 
-<footer>
 
-<div> &#169;2015 Startup Matchmaker.Made in LA.</div>
+<div> &#169;2015 Startup Matchmaker. Made in LA.</div>
 	</body>
 </html>

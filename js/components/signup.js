@@ -1,28 +1,64 @@
-// javascript page
+// THIS IS THE NEWEST VERSION AT 9:03
 
-function postit(){
+function getFormValues(form){
 
-console.log("passed to .js!")
+var avatar = form.avatar.value;
+var email = form.email.value;
+var username = form.username.value;
+var password = form.password.value;
+var firstName = form.firstName.value;
+var lastName = form.lastName.value;
 
-  var email = document.getElementById("email").value;
-  var user = document.getElementById("user").value;
-  var pass = document.getElementById("pass").value;
-  var first = document.getElementById("first").value;
-  var last = document.getElementById("last").value;
+console.log(avatar, email, username, password, firstName, lastName);
 
-  var options = {
+
+  var newuser = {
+    avatar: {
+      image:null
+    },
     email: email,
-    
-  };
+    username: username,
+    password: password,
+    lastName: lastName,
+    firstName: firstName
+ };
 
-  var http = new xhrHandler();
-
-  var req = http.request(function("POST", "URL", );
-
-  req(function success(){
-
-  }, function error(){
-
-  })
+ console.log(newuser);
 
 }
+
+function previewFile() {
+  var preview = document.querySelector('avatar');
+  var file    = document.querySelector('input[type=file]').files[0];
+  var reader  = new FileReader();
+
+  reader.onloadend = function () {
+    preview.src = reader.result;
+  }
+
+  if (file) {
+    reader.readAsDataURL(file);
+  } else {
+    preview.src = "";
+  }
+}
+
+  // var avatar = document.getElementById("avatar").value;
+  // var email = document.getElementById("email").value;
+  // var user = document.getElementById("username").value;
+  // var pass = document.getElementById("password").value;
+  // var first = document.getElementById("firstName").value;
+  // var last = document.getElementById("lastName").value;
+
+
+// SEND TO API
+
+ //  var http = new xhrHandler();
+ //
+ //  var req = http.request(function("POST", "http://vvvvvv.club/api", newuser));
+ //
+ //  req(function success(){
+ //
+ //  }, function error(){
+ //
+ // })
