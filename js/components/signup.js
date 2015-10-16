@@ -1,4 +1,4 @@
-// THIS IS THE NEWEST VERSION AT 9:03
+
 
 function getFormValues(form){
 
@@ -10,25 +10,8 @@ var lastName = form.lastName.value;
 
 console.log(email, username, password, firstName, lastName);
 
-
-<<<<<<< HEAD
-  var newuser = {
-    avatar: {
-      image:null
-    },
-    email: email,
-<<<<<<< HEAD
-
-  };
-=======
-    username: username,
-    password: password,
-    lastName: lastName,
-    firstName: firstName
- };
->>>>>>> master
-=======
 }
+
 
 function previewFile() {
   var preview = document.querySelector('img');
@@ -38,60 +21,31 @@ function previewFile() {
   reader.onloadend = function (ev) {
     preview.src = reader.result;
     console.log(reader.result);
-
   }
 
     if (file) {
-    //  var avatarimage = reader.readAsDataURL(file);
       reader.readAsDataURL(file);
     } else {
       preview.src = "";
-    }
-
-
-// var newuser = {
-//   avatar: {
-//     image:reader.result
-//   },
-//   email: email,
-//   username: username,
-//   password: password,
-//   lastName: lastName,
-//   firstName: firstName
-// }
-// console.log(newuser);
+}
 };
 
->>>>>>> master
 
+//CREATE VARIABLE TO SEND TO API
 
-<<<<<<< HEAD
-}
-
-function previewFile() {
-  var preview = document.querySelector('avatar');
-  var file    = document.querySelector('input[type=file]').files[0];
-  var reader  = new FileReader();
-
-  reader.onloadend = function () {
-    preview.src = reader.result;
-  }
-
-  if (file) {
-    reader.readAsDataURL(file);
-  } else {
-    preview.src = "";
-  }
-}
-
-=======
->>>>>>> master
-  // var avatar = document.getElementById("avatar").value;
-  // var email = document.getElementById("email").value;
-  // var user = document.getElementById("username").value;
-  // var pass = document.getElementById("password").value;
-  // var first = document.getElementById("firstName").value;
-  // var last = document.getElementById("lastName").value;
+//  var newuser = {
+//    avatar: {
+//      image:null
+//    },
+//    email: email,
+//
+//  };
+//
+//    username: username,
+//    password: password,
+//    lastName: lastName,
+//    firstName: firstName
+// };
 
 
 // SEND TO API
