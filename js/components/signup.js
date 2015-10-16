@@ -31,21 +31,20 @@ function previewFile() {
 };
 
 
-//CREATE VARIABLE TO SEND TO API
+CREATE VARIABLE TO SEND TO API
 
-//  var newuser = {
-//    avatar: {
-//      image:null
-//    },
-//    email: email,
-//
-//  };
-//
-//    username: username,
-//    password: password,
-//    lastName: lastName,
-//    firstName: firstName
-// };
+ var newuser = {
+   avatar: {
+     image:reader.result
+   },
+   email: email,
+   username: username,
+   password: password,
+   lastName: lastName,
+   firstName: firstName
+
+ };
+
 
 
 // SEND TO API
