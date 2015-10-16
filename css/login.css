@@ -19,12 +19,13 @@ body {
 h1 {
   position: relative;
   margin: auto;
-  width: 60%;
+  width: 100%;
   padding: 10px;
-  font-weight: 200;
+  font-weight: 300;
   color: #851513;
   font-family: 'Open Sans';
-  font-size: 50px
+  font-size: 50px;
+  text-height: 50px;
 }
 h2 {
   font-color: #DCE0D9;
