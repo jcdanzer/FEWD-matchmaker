@@ -4,3 +4,7 @@ input [type="password"]
 {
   -webkit-text-security: disc;
 }
+
+.img-circle {
+    border-radius: 50%;
+}
