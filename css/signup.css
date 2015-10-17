@@ -1,6 +1,53 @@
+.main{
+  margin-bottom: 50px;
+}
 
 
-input [type="password"]
-{
+header h1{
+text-align: center ;
+width 100%;
+}
+
+
+p img {
+  margin-left: 300px;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.imgg{
+  margin-left: 300px;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.img-circle {
+    border-radius: 50%;
+
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+
+input[type="password"] {
   -webkit-text-security: disc;
+  padding: 10px;
+  border: solid 1px #dcdcdc;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+  width:300px;
+  background:orange;
+}
+
+p input {
+  width: 100%
 }

@@ -20,23 +20,23 @@
 	<body>
 		<div class="container">
 			<div class="main" >
-		<header><h2>Startup Matchmaker Mach 2</h2></header>
+		<header><h1>Startup Matchmaker Mach 2</h1></header>
 
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Image preview...">
+<div class="main">
 
-<!--<p>	avatar: <input tabindex="0"type="file" name="avatar" onchange="previewFile()" value="get file" size="25" maxlength="50" /></p>-->
+<p><img class="img-circle" src="" height="150"><p>
+<p><input class="imgg" type="file" onchange="previewFile()"/><p>
+</div>
 
+<form name="newuser" action="" method="get">
 
-	<form name="newuser" action="" method="get">
-				<fieldset>
 <p> <input tabindex="1" type="text" onfocus="if (this.value=='email') this.value = ''" type="email" value="email"name="email" size="25" maxlength="50" /></p>
 <p> <input tabindex="2" type="text" onfocus="if (this.value=='user name') this.value = ''" type="text" value="user name"name="username" size="25" maxlength="50" /></p>
 <p>	<input tabindex="3" type="password" onfocus="if (this.value=='password') this.value = ''" type="text" value="password"name="password" size="25" maxlength="50" /></p>
 <p>	<input tabindex="4" type="text" onfocus="if (this.value=='first name') this.value = ''" type="text" value="first name"name="firstName" size="25" maxlength="50" /></p>
 <p>	<input tabindex="5" type="text" onfocus="if (this.value=='last name') this.value = ''" type="text" value="last name"name="lastName" size="25" maxlength="50" /></p>
 <p> <input tabindex="6" type="submit" name="submit" value="Create User" onclick="getFormValues(this.form)"/></p>
-				</fieldset>
+
 </form>
 </div>
 </div>
@@ -44,6 +44,6 @@
 <div><a href="#"> Already have an account?</a></div>
 
 
-<div> &#169;2015 Startup Matchmaker. Made in LA.</div>
+<footer> &#169;2015 Startup Matchmaker. Made in LA.</footer>
 	</body>
 </html>
