@@ -1,5 +1,37 @@
+
+
+#placeholder-canvas{
+    z-index: -1;
+    border-radius: 120px;
+    background-color:#575656;
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    margin-left: 90px;
+    margin-top: 50px;
+    margin-bottom: -170px;
+    margin-right: auto;
+    padding: 10px;
+    position:relative;
+    z-index: -1;
+}
+
+
+
+div a {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container{
+
+
+}
+
 .main{
-  margin-bottom: 50px;
+  padding-bottom: 50px;
+    background-image: url("/images/pattern.png");
 }
 
 
@@ -10,21 +42,28 @@ width 100%;
 
 
 p img {
-  margin-left: 300px;
+  margin-left: auto;
   margin-right: auto;
   padding: 10px;
 }
 
 .imgg{
-  margin-left: 300px;
+  margin-left: 90px;
   margin-right: auto;
   padding: 10px;
+
 }
 
 .img-circle {
     border-radius: 50%;
+    margin-left: 90px;
+    margin-right: auto;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
 
 }
+
 
 input[type="text"] {
   padding: 10px;
@@ -45,9 +84,25 @@ form {
   margin-left: auto;
   margin-right: auto;
   width:300px;
-  background:orange;
+
 }
 
 p input {
   width: 100%
 }
+
+footer {
+  color: #BC261D;
+  font-size: 20px;
+  background-color: #DCE0D9;
+  height: 40px;
+  margin-top: 200px;
+  padding: 1%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 25px;
+  -webkit-margin-before: 0em;
+      -webkit-margin-after: 0em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+    }

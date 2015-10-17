@@ -1,16 +1,24 @@
 
+// CONTAINER OBJECT TO SEND TO API
+
+var signupInfo = {}
+
+// GET VALUES FROM HTML
 
 function getFormValues(form){
 
-var email = form.email.value;
-var username = form.username.value;
-var password = form.password.value;
-var firstName = form.firstName.value;
-var lastName = form.lastName.value;
+signupInfo.email = form.email.value;
+signupInfo.username = form.username.value;
+signupInfo.password = form.password.value;
+signupInfo.firstName = form.firstName.value;
+signupInfo.lastName = form.lastName.value;
 
-console.log(email, username, password, firstName, lastName);
+console.log(signupInfo);
 
 }
+
+// HANDLE IMAGE INGEST AND CONVERSION TO STRING
+
 function previewFile() {
   var preview = document.querySelector('img');
   var file    = document.querySelector('input[type=file]').files[0];
@@ -18,44 +26,25 @@ function previewFile() {
 
   reader.onloadend = function (ev) {
     preview.src = reader.result;
+    signupInfo.avatar = reader.result;
     console.log(reader.result);
   }
-
     // if (file) {
        reader.readAsDataURL(file);
     // } else {
       preview.src = "";
   //  }
 
-// var newuser = {
-//   avatar: {
-//     image:reader.result
-//   },
-//   email: email,
-//   username: username,
-//   password: password,
-//   lastName: lastName,
-//   firstName: firstName
-//
-// };
-
-
-// CREATE VARIABLE TO SEND TO API
-
-
-
  };
 
-
-
-// SEND TO API
+//SEND TO API
 
  //  var http = new xhrHandler();
- //
- //  var req = http.request(function("POST", "http://vvvvvv.club/api", newuser));
+ // console.log(signupInfo)
+ //  var req = http.request(function("POST", "http://vvvvvv.club/api", signupInfo));
  //
  //  req(function success(){
- //
+ // console.log("yep, its in")
  //  }, function error(){
- //
+ //  console.log("well, that didnt work")
  // })
