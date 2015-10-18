@@ -20,27 +20,37 @@
 	<body>
 		<div class="container">
 
-		<header><h1>Startup Matchmaker Mach 2</h1></header>
+		<header><h1>Startup Matchmaker</h1></header>
 		<form name="newuser" method="get">
+
 <canvas id="placeholder-canvas"></canvas>
-<p><img class="img-circle" src="" height="150" width="150"></p>
+<p><img class="img-circle" src="" height="150" width="150" border="0"></p>
 <p><input class="imgg" type="file" onchange="previewFile()"/><p>
-<p> <input tabindex="1" type="text" onfocus="if (this.value=='email') this.value = ''" type="email" value="email"name="email" size="25" maxlength="50" /></p>
+	<label><input tabindex="1" type="text" placeholder="email address" id="email" value="email" name="email"></label>
+	<label><input tabindex="2" type="text" placeholder="username" id="username" value="username" name="username"></label>
+	<label><input tabindex="3" type="password" placeholder="password" id="password" value="password" name="password" data-psswrd-toggle></label>
+	<label><input tabindex="4" type="text" placeholder="first name" id="firstName" value="first name" name="firstName"></label>
+	<label><input tabindex="5" type="text" placeholder="last name" id="lastName" value="last name" name="lastName"></label>
+	<label class ="submit"><input tabindex="6" type="submit" name="submit" value="Create User" onclick="getFormValues(this.form)"/><label>
+
+
+<!-- <p> <input tabindex="1" type="text" onfocus="if (this.value=='email') this.value = ''" type="email" value="email"name="email" size="25" maxlength="50" /></p>
 <p> <input tabindex="2" type="text" onfocus="if (this.value=='user name') this.value = ''" type="text" value="user name"name="username" size="25" maxlength="50" /></p>
 <p>	<input tabindex="3" type="password" onfocus="if (this.value=='password') this.value = ''" type="text" value="password"name="password" size="25" maxlength="50" /></p>
 <p>	<input tabindex="4" type="text" onfocus="if (this.value=='first name') this.value = ''" type="text" value="first name"name="firstName" size="25" maxlength="50" /></p>
 <p>	<input tabindex="5" type="text" onfocus="if (this.value=='last name') this.value = ''" type="text" value="last name"name="lastName" size="25" maxlength="50" /></p>
-<p> <input tabindex="6" type="submit" name="submit" value="Create User" onclick="getFormValues(this.form)"/></p>
-
+<p> <input tabindex="6" type="submit" name="submit" value="Create User" onclick="getFormValues(this.form)"/></p> -->
+<div><a href="#"> Already have an account?</a></div>
 </form>
 
-<div><a href="#"> Already have an account?</a></div>
+
+
 
 </div>
 
 
 
 
-<footer> <h3>&#169;2015 Startup Matchmaker. Made in LA.</h3></footer>
+<footer> <h5>&#169;2015 Startup Matchmaker. Made in LA.</h5></footer>
 	</body>
 </html>
