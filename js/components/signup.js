@@ -31,18 +31,28 @@ signupInfo.password = form.password.value;
 signupInfo.firstName = form.firstName.value;
 signupInfo.lastName = form.lastName.value;
 
- console.log(signupInfo);
+if (form.username.value != "username" &&  form.password.value != "password" && form.email.value != "email address" && form.firstName.value != "first name" && form.lastName.value != "last name")
+{ console.log("here we go")
+sendToApi ();
+}
+else {
+alert ("Please fill out form completely, dork.")
 }
 
+};
 
-//SEND TO API
 
-// var http = new xhrHandler();
-//  console.log(signupInfo)
-//   var req = http.request(function("POST", "http://vvvvvv.club/api", signupInfo));
-//
-//   req(function success(){
-//  console.log("yep, its in")
-//   }, function error(){
-//   console.log("well, that didnt work")
-//  })
+function sendToApi(loginInfo){
+
+var http = new xhrHandler();
+
+  console.log("HELLO");
+
+  var req = http.request('POST','http://vvvvvv.club/api/signup', signupInfo);
+
+  console.log("SENT TO API");
+  console.log(signupInfo);
+
+  //window.location.href = '/views/team.html';
+
+ };

@@ -10,11 +10,13 @@ function getLoginValues(form){
 loginInfo.username = form.username.value;
 loginInfo.password = form.password.value;
 
-if (form.username.value != "null" &&  form.password.value != "null")
+if (form.username.value != "username" &&  form.password.value != "password")
 { console.log("here we go")
-// sendToApi ();
+sendToApi ();
 }
- console.log(loginInfo);
+else {
+  alert("Uh, login and password please!")
+}
 }
 
 
@@ -23,14 +25,14 @@ if (form.username.value != "null" &&  form.password.value != "null")
 function sendToApi(loginInfo){
 
 var http = new xhrHandler();
-console.log(loginInfo);
 
-  var req = http.request(function('POST','http://vvvvvv.club/login', loginInfo);
+  console.log("HELLO");
 
-  req(function success(){
- console.log("yep, its in");
-  }, function error(){
-  console.log("well, that didnt work");
- })
+  var req = http.request('POST','http://vvvvvv.club/api/login', loginInfo);
+
+  console.log("SENT TO API");
+   console.log(loginInfo);
+
+//window.location.href = '/views/team.html';
 
  };
