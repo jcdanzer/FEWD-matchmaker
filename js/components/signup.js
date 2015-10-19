@@ -1,17 +1,9 @@
-// THIS IS THE NEWEST VERSION AT 9:03
 
-function getFormValues(form){
+// CONTAINER OBJECT TO GATHER UP FORM INFO AND AVATAR IMAGE
 
-var email = form.email.value;
-var username = form.username.value;
-var password = form.password.value;
-var firstName = form.firstName.value;
-var lastName = form.lastName.value;
+var signupInfo = {}
 
-console.log(email, username, password, firstName, lastName);
-
-
-}
+// HANDLE IMAGE INGEST AND CONVERSION TO BASE_64
 
 function previewFile() {
   var preview = document.querySelector('img');
@@ -20,49 +12,47 @@ function previewFile() {
 
   reader.onloadend = function (ev) {
     preview.src = reader.result;
-    console.log(reader.result);
-
+    signupInfo.avatar = reader.result;
   }
+    // if (file) {
+       reader.readAsDataURL(file);
+    // } else {
+    //  preview.src = "";
+  //  }
+ };
 
-    if (file) {
-    //  var avatarimage = reader.readAsDataURL(file);
-      reader.readAsDataURL(file);
-    } else {
-      preview.src = "";
-    }
+// GET VALUES FROM HTML FORM
 
+function getFormValues(form){
 
-// var newuser = {
-//   avatar: {
-//     image:reader.result
-//   },
-//   email: email,
-//   username: username,
-//   password: password,
-//   lastName: lastName,
-//   firstName: firstName
-// }
-// console.log(newuser);
+signupInfo.email = form.email.value;
+signupInfo.username = form.username.value;
+signupInfo.password = form.password.value;
+signupInfo.firstName = form.firstName.value;
+signupInfo.lastName = form.lastName.value;
+
+if (form.username.value != "username" &&  form.password.value != "password" && form.email.value != "email address" && form.firstName.value != "first name" && form.lastName.value != "last name")
+{ console.log("here we go")
+sendToApi ();
+}
+else {
+alert ("Please fill out form completely, dork.")
+}
+
 };
 
 
+function sendToApi(signupInfo){
 
-  // var avatar = document.getElementById("avatar").value;
-  // var email = document.getElementById("email").value;
-  // var user = document.getElementById("username").value;
-  // var pass = document.getElementById("password").value;
-  // var first = document.getElementById("firstName").value;
-  // var last = document.getElementById("lastName").value;
+var http = new xhrHandler();
 
+  console.log("HELLO");
 
-// SEND TO API
+  var req = http.request('POST','http://vvvvvv.club/api/signup', signupInfo);
 
- //  var http = new xhrHandler();
- //
- //  var req = http.request(function("POST", "http://vvvvvv.club/api", newuser));
- //
- //  req(function success(){
- //
- //  }, function error(){
- //
- // })
+  console.log("SENT TO API");
+  console.log(signupInfo);
+
+  //window.location.href = '/views/team.html';
+
+ };

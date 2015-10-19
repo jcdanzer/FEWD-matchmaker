@@ -1,12 +1,25 @@
-
 body {
   font: #FFFFFF;
   font-family: 'open sans';
+  -webkit-margin-before: 0em;
+      -webkit-margin-after: 0em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
 }
 
 header h1 {
   color: #BC261D;
   font-size: 20px;
+  background-color: #DCE0D9;
+  height: 40px;
+  padding: 1%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+  -webkit-margin-before: 0em;
+      -webkit-margin-after: 0em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
 }
 
 #triangle {
@@ -18,11 +31,34 @@ header h1 {
   float: right;
   width: 30%;
   position: relative;
+  color: white;
+  padding-right: 5%;
+}
+
+.one h3 {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.one p {
+  font-weight: 300;
+  font-size: 15px;
 }
 
 .one ul li {
   display: inline-block;
 }
+
+.button {
+  background-color: #BC261D;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 300;
+  font-size: 15px;
+  margin: 9px;
+
+}
+
 
 .two {
   width: 100%;

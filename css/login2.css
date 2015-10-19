@@ -1,4 +1,10 @@
 
+.logincontainer{
+  background-image: url("/images/oranger.svg");
+width:100%;
+height: 1500px;
+}
+
 
 #placeholder-canvas{
 
@@ -35,8 +41,6 @@ div a{
 
 .container{
   background-image: url("/images/oranger.svg");
-  position:relative;
-  padding-bottom: 60px;
   position:relative;
 }
 
@@ -101,7 +105,7 @@ form {
   margin-right: auto;
   background-color: #DCE0D9;
   width:350px;
-  height:780px;
+  height:280px;
   border-bottom-right-radius:10px;
   border-bottom-left-radius:10px;
   position:relative;

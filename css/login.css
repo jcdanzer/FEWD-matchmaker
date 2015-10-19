@@ -19,16 +19,43 @@ body {
 h1 {
   position: relative;
   margin: auto;
-  width: 60%;
+  width: 100%;
   padding: 10px;
-  font-weight: 200;
+  font-weight: 300;
   color: #851513;
   font-family: 'Open Sans';
-  font-size: 50px
+  font-size: 50px;
+  text-height: 50px;
 }
 h2 {
   font-color: #DCE0D9;
   font-family: 'open sans';
+  position: relative;
+  margin: auto;
+  width: 60%;
+  padding: 10px;
 
 }
-]
+#username{
+color: black;
+font-size: 16px
+}
+#password{
+
+}
+
+#submit {
+  font-size: 16px;
+  border-radius: 5px;
+  border-width: 0px;
+  color: #DCE0D9;
+  width: 150px;
+  height: 30px;
+  background-color: #851513;
+  position: fixed;
+  left:50%;
+
+  font-weight: bold;
+  cursor: pointer;
+
+}
