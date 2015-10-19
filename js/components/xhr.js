@@ -4,10 +4,8 @@ var xhrHandler = function(){
    // path of the request
    // the HTML verb which is the action we want to take (GET, POST)
    // options is a Javascript Object with key value pairs
-
-
-
 };
+
 xhrHandler.prototype.request = function(verb, path, options){
 
     // returns a promise
