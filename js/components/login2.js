@@ -15,12 +15,14 @@ if (form.username.value != "username" &&  form.password.value != "password")
 sendToApi ();
 }
 else {
-  alert("Uh, login and password please!")
+  {alert("Please enter login and password.")}
 }
+ console.log(loginInfo);
 }
 
 
 //SEND TO API
+
 
 function sendToApi(loginInfo){
 
@@ -28,11 +30,11 @@ var http = new xhrHandler();
 
   console.log("HELLO");
 
-  var req = http.request('POST','http://vvvvvv.club/api/login', loginInfo);
+  var req = http.request('POST','http://vvvvvv.club/api/signup', loginInfo);
 
   console.log("SENT TO API");
-   console.log(loginInfo);
+  console.log(loginInfo);
 
-//window.location.href = '/views/team.html';
+  //window.location.href = '/views/team.html';
 
  };

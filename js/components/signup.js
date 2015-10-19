@@ -42,7 +42,7 @@ alert ("Please fill out form completely, dork.")
 };
 
 
-function sendToApi(loginInfo){
+function sendToApi(signupInfo){
 
 var http = new xhrHandler();
 
