@@ -24,13 +24,13 @@ else {
 //SEND TO API
 
 
-function sendToApi(loginInfo){
+function sendToApi(){
 
-var http = new xhrHandler();
+var xhr = new xhrHandler();
 
   console.log("HELLO");
 
-  var req = http.request('POST','http://vvvvvv.club/api/signup', loginInfo);
+  xhr.request('POST','http://vvvvvv.club/api/signup',loginInfo);
 
   console.log("SENT TO API");
   console.log(loginInfo);
