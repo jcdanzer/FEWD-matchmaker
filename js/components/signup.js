@@ -31,6 +31,8 @@ signupInfo.password = form.password.value;
 signupInfo.firstName = form.firstName.value;
 signupInfo.lastName = form.lastName.value;
 
+console.log(signupInfo);
+
 if (form.username.value != "username" &&  form.password.value != "password" && form.email.value != "email address" && form.firstName.value != "first name" && form.lastName.value != "last name")
 { console.log("here we go")
 sendToApi ();
@@ -38,20 +40,19 @@ sendToApi ();
 else {
 alert ("Please fill out form completely, dork.")
 }
-
 };
 
 
-function sendToApi(signupInfo){
-
+function sendToApi(){
+//console.log(signupInfo);
 var http = new xhrHandler();
 
   console.log("HELLO");
 
-  var req = http.request('POST','http://vvvvvv.club/api/signup', signupInfo);
+  var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo);
 
   console.log("SENT TO API");
-  console.log(signupInfo);
+
 
   //window.location.href = '/views/team.html';
 
