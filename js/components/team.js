@@ -1,1 +1,4 @@
-var TeamPage = function(list)
+var teamMenu = Fuction (list){
+  this.list = [];
+  this.open = true;
+}
