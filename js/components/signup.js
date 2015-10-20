@@ -21,39 +21,33 @@ function previewFile() {
   //  }
  };
 
+ function sendToApi(){
+ //console.log(signupInfo);
+ var http = new xhrHandler();
+
+   console.log("HELLO");
+
+   var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo);
+
+   console.log("SENT TO API");
+
+
+   window.location.href = '/views/team.html';
+
+  };
+
 // GET VALUES FROM HTML FORM
 
-function getFormValues(form){
 
-signupInfo.email = form.email.value;
-signupInfo.username = form.username.value;
-signupInfo.password = form.password.value;
-signupInfo.firstName = form.firstName.value;
-signupInfo.lastName = form.lastName.value;
+function getFormValues(){
+  console.log('in form');
+
+signupInfo.email = document.getElementById('email').value;
+signupInfo.username = document.getElementById('username').value;
+signupInfo.password = document.getElementById('password').value;
+signupInfo.firstName = document.getElementById('firstName').value;
+signupInfo.lastName = document.getElementById('lastName').value;
 
 console.log(signupInfo);
-
-if (form.username.value != "username" &&  form.password.value != "password" && form.email.value != "email address" && form.firstName.value != "first name" && form.lastName.value != "last name")
-{ console.log("here we go")
 sendToApi ();
-}
-else {
-alert ("Please fill out form completely, dork.")
-}
 };
-
-
-function sendToApi(){
-//console.log(signupInfo);
-var http = new xhrHandler();
-
-  console.log("HELLO");
-
-  var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo);
-
-  console.log("SENT TO API");
-
-
-  //window.location.href = '/views/team.html';
-
- };
