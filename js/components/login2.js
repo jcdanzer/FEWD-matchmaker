@@ -17,7 +17,6 @@ sendToApi ();
 else {
   {alert("Please enter login and password.")}
 }
- console.log(loginInfo);
 }
 
 
@@ -30,7 +29,7 @@ var xhr = new xhrHandler();
 
   console.log("HELLO");
 
-  xhr.request('POST','http://vvvvvv.club/api/signup',loginInfo);
+  xhr.request('POST','http://vvvvvv.club/api/login',loginInfo);
 
   console.log("SENT TO API");
   console.log(loginInfo);

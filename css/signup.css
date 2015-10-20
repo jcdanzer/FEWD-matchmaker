@@ -73,6 +73,8 @@ p img {
     margin-right: auto;
     padding: 10px;
     position: relative;
+    height= 150px;
+    width= 150px;
 }
 
 label input{

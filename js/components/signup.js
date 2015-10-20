@@ -48,7 +48,7 @@ var http = new xhrHandler();
 
   console.log("HELLO");
 
-  var req = http.request('POST','http://vvvvvv.club/api/signup', signupInfo);
+  var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo);
 
   console.log("SENT TO API");
   console.log(signupInfo);
