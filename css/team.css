@@ -12,7 +12,7 @@ header h1 {
   font-size: 20px;
   background-color: #DCE0D9;
   height: 40px;
-  padding: 1%;
+  padding: 2%;
   text-align: center;
   font-weight: 300;
   font-size: 30px;
@@ -28,8 +28,6 @@ header h1 {
   right: 20px;
   color: red;
   background-color: #DCE0D9;
-  border-radius: 5px;
-  padding: 5px;
   font-weight: 300;
   font-size: 15px;
   margin: 0px;
@@ -52,4 +50,48 @@ header h1 {
   overflow-x:scroll;
   display: flex;
   justify-content: flex-start;
+}
+
+.menu .plus {
+  background: url('/Images/whiteplus-01.png');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 44px;
+
+}
+
+.menu {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 320px;
+  height: 100%;
+  background-color: #DCE0D9;
+}
+.menu .add-form {
+  width: 100%;
+  display:flex;
+  margin-left: 0px;
+  height: 44px;
+  background: #DCE0D9;
+}
+
+
+input[type=text] {
+  border-radius: 8px;
+  -webkit-appearance: none;
+  border: 0 none;
+  padding: 4px 10px 4px 20px;
+  margin-left: 20px;
+  width: 75%;
+  font-size: 16px;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+.tiles {
+  background: url('/Images/oranger.svg');
+  width: 1200px;
+  background-color: blue;
 }
