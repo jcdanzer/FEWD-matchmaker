@@ -12,32 +12,23 @@ function previewFile() {
 
   reader.onloadend = function (ev) {
     preview.src = reader.result;
-    signupInfo.avatar = reader.result;
+    signupInfo.avatar = { "image": reader.result }
   }
-    // if (file) {
        reader.readAsDataURL(file);
-    // } else {
-    //  preview.src = "";
-  //  }
  };
 
  function sendToApi(){
- //console.log(signupInfo);
  var http = new xhrHandler();
 
    console.log("HELLO");
-
-   var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo);
-
-   console.log("SENT TO API");
-
-
-   window.location.href = '/views/team.html';
+   var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo)
+   console.log(req)
+  // window.location.href = '/views/team.html';
 
   };
 
-// GET VALUES FROM HTML FORM
 
+// GET VALUES FROM HTML FORM
 
 function getFormValues(){
   console.log('in form');
