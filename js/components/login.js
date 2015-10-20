@@ -15,7 +15,7 @@ var xhr = new xhrHandler();
   console.log("SENT TO API");
   console.log(loginInfo);
 
-  //window.location.href = '/views/team.html';
+
 
  };
 
@@ -28,4 +28,5 @@ function getLoginValues(form){
 
 sendToApi ();
 
+window.location.href = '/views/team.html';
 };

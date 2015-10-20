@@ -7,7 +7,6 @@ function getUsers(){
     var container = document.getElementById('welcome');
     xhr.request('GET', "http://vvvvvv.club/api/user","").then(function(res){
       console.log(res);
-    
     });
 };
 

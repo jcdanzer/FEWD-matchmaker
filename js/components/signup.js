@@ -23,7 +23,7 @@ function previewFile() {
    console.log("HELLO");
    var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo)
    console.log(req)
-  window.location.href = '/views/team.html';
+
 
   };
 
@@ -41,4 +41,5 @@ signupInfo.lastName = document.getElementById('lastName').value;
 
 console.log(signupInfo);
 sendToApi ();
+window.location.href = '/views/team.html';
 };
