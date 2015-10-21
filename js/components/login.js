@@ -28,5 +28,5 @@ function getLoginValues(form){
 
 sendToApi ();
 
-window.location.href = '/views/team.html';
+//window.location.href = '/views/team.html';
 };
