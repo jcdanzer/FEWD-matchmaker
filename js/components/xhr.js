@@ -4,10 +4,8 @@ var xhrHandler = function(){
    // path of the request
    // the HTML verb which is the action we want to take (GET, POST)
    // options is a Javascript Object with key value pairs
-
-
-
 };
+
 xhrHandler.prototype.request = function(verb, path, options){
 
     // returns a promise
@@ -23,20 +21,26 @@ xhrHandler.prototype.request = function(verb, path, options){
       xhr.setRequestHeader("Content-Type", "application/json");
       xhr.withCredentials = true;
 
+console.log("REQUEST OPEN");
+
       // handle changes in the response.
       xhr.onreadystatechange = function() {
         // if the response is ready
         if (xhr.readyState == 4) {
+console.log(xhr.readyState);
           // if the response returns 401 Unauthorized
           if(xhr.status === 401){
             resp = xhr.responseText;
+console.log(xhr.status);
             resolve(resp);
           }
           // if the response returns 200 OK
           if (xhr.status === 200) {
+console.log(xhr.readyState);
             try{
               // try to parse the response as JSON
               resp = JSON.parse(xhr.responseText);
+console.log(resp);
             }
             catch(error){
               // if the parse fails, print the response
@@ -70,6 +74,10 @@ xhrHandler.prototype.request = function(verb, path, options){
       // if there is an object, pass it with the request
       if(hasParams === true){
         xhr.send(JSON.stringify(params));
+
+console.log(JSON.stringify(params));
+console.log("SENDING JSON")
+
     } // otherwise, just send the request
       else{
         xhr.send();
