@@ -8,15 +8,24 @@ var Tiles = function(users){
 
   this.elem.classList.add('tiles');
 
- users.forEach(function(users){
-   var li = document.createElement('li');
-   this.ul.appendChild(li);
 
-   li.innerHTML = '<img src="'+card.avatar.image+'"><div class="email"><h2>'+object.email+'</h2></div>';
+users.forEach(function(users){
+   var li = document.createElement('li');
+
+   li.innerHTML = '<div>'+users.firstName+'</div>';
+
+   this.ul.appendChild(li);
 
 
  }.bind(this));
 
+
   document.getElementById('container').appendChild(this.elem);
 
 };
+
+  //  li.innerHTML = '<img src="'+"http://vvvvvv.club"+res.avatar'"><div class="email"><h2>'&#64;'+'+res.username+'</h2></div>';
+
+// '<div class="avatar><img src="'+photo.image_url+'">';
+
+//src='"http://vvvvvv.club"+'+image.avatar+'>';
