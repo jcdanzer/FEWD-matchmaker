@@ -2,17 +2,15 @@
 
 var xhr= new xhrHandler();
 
-xhr.request('POST',"http://vvvvvv.club/api/login", {"username": "admin", "password": "password"}).then(function(data){
-  console.log('hey i"m logged in!');
-  getUsers();
-});
-
-
+// xhr.request('POST',"http://vvvvvv.club/api/login", {"username": "admin", "password": "password"}).then(function(data){
+//   console.log('hey i"m logged in!');
+//   getUsers();
+// });
 
 
 function getUsers(){
 
-    xhr.request('GET', "http://vvvvvv.club/api/user","").then(function(res){
+    xhr.request('GET', "http://vvvvvv.club/api/user").then(function(res){
       console.log(res);
 
 
@@ -32,6 +30,8 @@ new Tiles(res)
 
     });
 };
+
+getUsers();
 
 
 
