@@ -1,0 +1,179 @@
+body {
+  font: #FFFFFF;
+  font-family: 'open sans';
+  -webkit-margin-before: 0em;
+      -webkit-margin-after: 0em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+}
+
+header h1 {
+  color: #BC261D;
+  font-size: 20px;
+  background-color: #DCE0D9;
+  height: 40px;
+  padding: 2%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+  -webkit-margin-before: 0em;
+      -webkit-margin-after: 0em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+}
+
+.button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: red;
+  background-color: #DCE0D9;
+  font-weight: 300;
+  font-size: 15px;
+  margin: 0px;
+}
+
+.button a, a:visited {
+  font-family: 'open sans', sans-serif;
+  font-weight: 500;
+  color: #BC261D;
+}
+
+.button a:hover {
+  color: #fff;
+}
+
+#container {
+  position: absolute;
+  width:1000%;
+  height:100%;
+  overflow-x:scroll;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menu .add {
+  background: url('/Images/whiteplus-01.png');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 60px;
+  float: right;
+  padding-right: 30px;
+
+}
+
+.menu {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 320px;
+  height: 100%;
+  background-color: #DCE0D9;
+}
+.menu .add-form {
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  display: flex;
+  padding: 8px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  height: 44px;
+  background: #DCE0D9;
+  -webkit-transform-origin: 50% 0%;
+  transform-origin: 50% 0%;
+  transition: transform 0.65s ease-in-out;
+}
+
+
+
+input[type=text] {
+  border-radius: 8px;
+  -webkit-appearance: none;
+  border: 0 none;
+  margin-left: 25px;
+  width: 70%;
+  height: 50px;
+  font-size: 16px;
+  padding: 0 10px 0 20px;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    -webkit-transform-origin: 50% 0%;
+    transform-origin: 50% 0%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu ul li {
+
+    width: 100%;
+    background: #DCE0D9;
+    border-bottom: 1px solid #ffffff;
+    padding: 40px;
+    font-weight: 'open sans', sans-serif;
+    font-weight: 600;
+    color: #BC261D;
+
+}
+
+.menu ul li input{
+    margin-right: 12px;
+}
+
+.tiles {
+  background: url('/Images/oranger.svg');
+  width: 1200px;
+}
+
+.user ul{
+
+  list-style-type:none;
+  width:100%;
+  height:auto;
+  position:relative;
+  -webkit-transition: all 1.2s; /* Safari */
+  transition: all 1.2s;
+
+}
+.user ul li{
+  display:block;
+  width:25vw;
+  height:25vw;
+  float:left;
+  position:relative;
+  background-size:90%;
+  background-color: #fff;
+  border-radius: 10%;
+}
+
+.user ul li .avatar{
+  display:block;
+  width:25vw;
+  height:25vw;
+  float:left;
+  position:relative;
+  background-size:90%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.user ul li .email h2{
+
+  color:rgba(255,255,255,0.8);
+  font-weight:100;
+  opacity:0.8;
+  width: 100%;
+  position: absolute;
+  right:40px;
+  bottom: 40px;
+  padding-left:20px;
+  text-align:right;
+  text-shadow:rgba(122,122,122,0.8);
+  letter-spacing:0.065em;
+
+}

@@ -1,16 +1,10 @@
 
+// CONTAINER OBJECT TO GATHER UP FORM INFO AND AVATAR IMAGE
 
-function getFormValues(form){
+var signupInfo = {}
 
-var email = form.email.value;
-var username = form.username.value;
-var password = form.password.value;
-var firstName = form.firstName.value;
-var lastName = form.lastName.value;
+// HANDLE IMAGE INGEST AND CONVERSION TO BASE_64
 
-console.log(email, username, password, firstName, lastName);
-
-}
 function previewFile() {
   var preview = document.querySelector('img');
   var file    = document.querySelector('input[type=file]').files[0];
@@ -18,44 +12,32 @@ function previewFile() {
 
   reader.onloadend = function (ev) {
     preview.src = reader.result;
-    console.log(reader.result);
+    signupInfo.avatar = { "image": reader.result }
   }
-
-    // if (file) {
        reader.readAsDataURL(file);
-    // } else {
-      preview.src = "";
-  //  }
-
-// var newuser = {
-//   avatar: {
-//     image:reader.result
-//   },
-//   email: email,
-//   username: username,
-//   password: password,
-//   lastName: lastName,
-//   firstName: firstName
-//
-// };
-
-
-// CREATE VARIABLE TO SEND TO API
-
-
-
  };
 
+ function sendToApi(){
+ var http = new xhrHandler();
+
+   console.log("HELLO");
+   var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo);
+
+  };
 
 
-// SEND TO API
+// GET VALUES FROM HTML FORM
 
- //  var http = new xhrHandler();
- //
- //  var req = http.request(function("POST", "http://vvvvvv.club/api", newuser));
- //
- //  req(function success(){
- //
- //  }, function error(){
- //
- // })
+function getFormValues(){
+  console.log('in form');
+
+signupInfo.email = document.getElementById('email').value;
+signupInfo.username = document.getElementById('username').value;
+signupInfo.password = document.getElementById('password').value;
+signupInfo.firstName = document.getElementById('firstName').value;
+signupInfo.lastName = document.getElementById('lastName').value;
+
+console.log(signupInfo);
+sendToApi ();
+//window.location.href = '/views/team.html';
+};
