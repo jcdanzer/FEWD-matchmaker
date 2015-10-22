@@ -21,9 +21,7 @@ function previewFile() {
  var http = new xhrHandler();
 
    console.log("HELLO");
-   var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo)
-   console.log(req)
-  // window.location.href = '/views/team.html';
+   var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo);
 
   };
 
@@ -41,4 +39,5 @@ signupInfo.lastName = document.getElementById('lastName').value;
 
 console.log(signupInfo);
 sendToApi ();
+//window.location.href = '/views/team.html';
 };

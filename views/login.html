@@ -1,48 +1,43 @@
+
+
 <!DOCTYPE html>
-<html lang="en-us">
-<head>
-  <title> Startup Matchmaker </title>
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/css/login.css">
-<!-- <link rel="stylesheet" href="/comps/normalize.css">
-  <link rel="stylesheet" href="/comps/reset.css"> -->
-<body>
-  <header>
-    <h1> Startup Matchmaker </h1>
-  </header>
-  <form id="form_id" method="post" name="myform">
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Matchmaker Login Page">
+    	<meta name="keywords" content="General Assembly, Javascript, JS">
+
+		<title>MM Login</title>
+
+		<!-- external CSS link -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="/css/reset.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/css/login2.css">
+		<script src="/js/components/login.js"></script>
+		<script src="/js/components/xhr.js"></script>
+	</head>
 
 
-  <input type="text" name="username" id="username" placeholder="Username"/>
-  <br>
-  <input type="password" name="password" id="password" placeholder="password"/>
-  <br>
-  <input type="button" value="Login" id="submit" onclick="validate()"/>
-  </form>
+	<body>
+		<div class="logincontainer">
 
+		<header><h1>Startup Matchmaker</h1></header>
+		<form name="newuser" method="get">
 
-    <script language="javascript">
-function check(form)/*function to check userid & password*/
-{
- /*the following code checkes whether the entered userid and password are matching*/
- if(form.userid.value == "myuserid" && form.pswrd.value == "mypswrd")
-  {
-    window.open('target.html')/*opens the target page while Id & password matches*/
-  }
- else
- {
-   alert("Error Password or Username")/*displays error message*/
-  }
-}
-</script>
-<h2>login</h2>
-<h3>Dont have an account?</h3>
-<footer>
-  &copy 2015 Startup Matchmaker. Made in LA.
-</footer>
+			<label><input tabindex="1" type="text" placeholder="username" id="username"  name="username"></label>
+			<label><input tabindex="2" type="password" placeholder="password" id="password"  name="password" data-psswrd-toggle></label>
+				<div class="submit" tabindex="3" onclick="getLoginValues()"></div>
+	<p><a href="/views/signup.html"> Do you need a new account?<p>
+</form>
+
+<div class="footertext"><a href="#"> &#169; 2015 Startup Matchmaker. Made in L.A.</a></div>
+
+</div>
 
 
 
 
-</body>
+
+	</body>
 </html>
