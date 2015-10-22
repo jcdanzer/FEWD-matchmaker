@@ -1,9 +1,6 @@
 var Tiles = function(users){
 
 
-console.log("THIS IS THE TILE FUNCTION")
-console.log(users)
-
   this.elem = document.createElement('div');
   this.ul = document.createElement('ul');
 
