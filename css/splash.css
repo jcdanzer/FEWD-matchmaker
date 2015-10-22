@@ -1,10 +1,13 @@
-body {
-  font: #FFFFFF;
-  font-family: 'open sans';
+* {
   -webkit-margin-before: 0em;
       -webkit-margin-after: 0em;
       -webkit-margin-start: 0px;
       -webkit-margin-end: 0px;
+}
+
+body {
+  font: #FFFFFF;
+  font-family: 'open sans';
 }
 
 header h1 {
@@ -15,16 +18,14 @@ header h1 {
   padding: 1%;
   text-align: center;
   font-weight: 300;
-  font-size: 25px;
-  -webkit-margin-before: 0em;
-      -webkit-margin-after: 0em;
-      -webkit-margin-start: 0px;
-      -webkit-margin-end: 0px;
+  font-size: 28px;
+
 }
 
 #triangle {
   background-image: url("../images/pattern_matchmaker.svg");
   background-repeat: no-repeat;
+  height: 250px;
 }
 
 .one {
@@ -59,13 +60,35 @@ header h1 {
 
 }
 
+.center h2 {
+  font-weight: 300;
+  font-size: 28px;
+  text-align: center;
+  position: relative;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
 
 .two {
-  width: 100%;
-  position: relative;
-  padding-top: 10%;
+  color: black;
+}
+.two ul li{
+display: inline-block;
+  width: 28%;
+  padding: 0% 2%;
+}
 
+.button2 {
+  background-color: #BC261D;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 300;
+  font-size: 15px;
+  text-align: center;
+}
 
+.two div {
+  margin-top: 5%;
 }
 
 .clearfix:after {
