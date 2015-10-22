@@ -17,7 +17,6 @@ header h1 {
   height: 40px;
   padding: 1%;
   text-align: center;
-
   font-weight: 400;
   font-size: 30px;
   -webkit-margin-before: 0em;
@@ -54,8 +53,8 @@ header h1 {
 }
 
 .one p {
-  font-weight: 400;
-  font-size: 50px;
+  font-weight: 300;
+  font-size: 13px;
 }
 
 .one li {
