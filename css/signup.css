@@ -79,23 +79,25 @@ p img {
 
 label input{
   border-radius: 10px;
-  margin-left: 15px;
+  margin-left: 25px;
   margin-top: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
 
-  width:300px;
-  height:40px;
+  width:255px;
+  height:32px;
   border: 0 none;
   padding: 10px;
 
   font-size: 18px;
 }
 
+
 p a{
 
   padding-left: 15px;
-    color: #BC261D;
+  color: #BC261D;
+  line-height: 50px;
 }
 
 form {
@@ -103,7 +105,7 @@ form {
   margin-right: auto;
   background-color: #DCE0D9;
   width:350px;
-  height:780px;
+  height:740px;
   border-bottom-right-radius:10px;
   border-bottom-left-radius:10px;
   position:relative;
@@ -112,9 +114,15 @@ form {
 .submit {
 
   color: white;
+  font-weight: 300;
   background-color: #BC261D;
-  width: 320px;
-  height: 60px;
+  width: 275px;
+  height: 30px;
+  border-radius: 6px;
+  margin: 15px 25px;
+  padding-top: 6px;
+  text-align: center;
+
 }
 
 footer {

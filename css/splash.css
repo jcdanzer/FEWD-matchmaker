@@ -38,6 +38,10 @@ header h1 {
   height: 200px;
 }
 
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
 .one {
   float: right;
   max-width: 30%;
