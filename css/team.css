@@ -66,7 +66,7 @@ header h1 {
   margin-left: 0px;
   margin-right: 0px;
   width: 320px;
-  height: 100%;
+  height: 1000%;
   background-color: #DCE0D9;
 }
 .menu .add-form {
@@ -128,52 +128,50 @@ input[type=text]:focus {
 .tiles {
   background: url('/Images/oranger.svg');
   width: 1200px;
+  height: 1000%;
 }
 
-.user ul{
+
+
+.tiles ul{
 
   list-style-type:none;
-  width:100%;
-  height:auto;
-  position:relative;
-  -webkit-transition: all 1.2s; /* Safari */
-  transition: all 1.2s;
+  width:1200px;
+  height: 100%;
+
 
 }
-.user ul li{
+.tiles ul li{
   display:block;
-  width:25vw;
-  height:25vw;
+  width:340px;
+  height:300px;
+  margin: 20px;
   float:left;
   position:relative;
-  background-size:90%;
   background-color: #fff;
   border-radius: 10%;
+
 }
 
-.user ul li .avatar{
-  display:block;
-  width:25vw;
-  height:25vw;
-  float:left;
-  position:relative;
-  background-size:90%;
-  background-color: #fff;
-  border-radius: 50%;
-}
+.tiles ul li .email h2{
 
-.user ul li .email h2{
-
-  color:rgba(255,255,255,0.8);
-  font-weight:100;
-  opacity:0.8;
-  width: 100%;
+  font-size: 20px;
+  font-weight:400;
+  width: 340px;
   position: absolute;
-  right:40px;
-  bottom: 40px;
-  padding-left:20px;
-  text-align:right;
+  bottom: 60px;
   text-shadow:rgba(122,122,122,0.8);
-  letter-spacing:0.065em;
+  color: #000;
+  text-align: center;
 
+}
+
+.tiles ul li .avatar img{
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 100px;
+  top: 40px;
 }
