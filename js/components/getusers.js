@@ -4,7 +4,7 @@ var xhr= new xhrHandler();
 
 xhr.request('POST',"http://vvvvvv.club/api/login", {"username": "admin", "password": "password"}).then(function(data){
   console.log('hey i"m logged in!');
-  getUsers();  
+  getUsers();
 });
 
 
