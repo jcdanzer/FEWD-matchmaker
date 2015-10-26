@@ -1,20 +1,15 @@
 // DRAG AND DROP FUNCTIONS
 
-function allowDrop(ev) {
-  console.log("I'm allowing dropping!");
-}
 
 function drag(ev) {
-    console.log("I'm dragging!");
-    ev.dataTransfer.setData("text", ev.target.id);
+    ev.dataTransfer.setData("data", ev.target.id);
+    console.log(ev.target.id)
 }
 
 function drop(ev) {
-    var data = ev.dataTransfer.getData("text");
-    console.log(ev.target);
+    var data = ev.dataTransfer.getData("data");
     ev.target.appendChild(document.getElementById(data));
-    console.log(ev.target);
-    console.log("I'm putting it down now!");
+    console.log("Drop it like it's hot!")
 }
 
 
@@ -72,22 +67,20 @@ var Menu = function(){
 Menu.prototype.addItem = function(item) {
   // push the item to the list
   this.list.push(item);
-  // create a li
+
+  // create an li
   var listItem = document.createElement('li');
 
   // set the content of the li
   listItem.innerHTML = '<span>'+item.content+'</span>';
-  // select the checkbox and listen for clicks
+
 
   // add a class for styling
   listItem.classList.add('menu-item');
 
   // add drop tags
   listItem.setAttribute("id","div1");
-  listItem.addEventListener('drop', function(){
-    console.log('hi');
-  }, false);
-  listItem.setAttribute("ondragover", allowDrop);
+//  listItem.setAttribute("ondrop", drop(event));
   // append the li
   this.ul.appendChild(listItem);
 

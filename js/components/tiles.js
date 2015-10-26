@@ -15,11 +15,12 @@ var Tiles = function(users){
 users.forEach(function(users, index){
    var li = document.createElement('li');
 
-   li.innerHTML = '<div class="avatar"><img id="drag'+index+'" src=http://vvvvvv.club'+users.avatar.image+' draggable="true" ondragstart="event.dataTransfer.setData(\"text/plain\",null)"></div><div class="email"><h2>&#64;'+users.username+'</h2></div>';
+
+   li.innerHTML = '<div class="avatar"><img id="drag'+index+'" src=http://vvvvvv.club'+users.avatar.image+' draggable="true"  ondragstart="drag(event)"></div><div class="email"><h2>&#64;'+users.username+'</h2></div>';
 
    li.addEventListener('dragstart', function(){
-     console.log('text')
-   })
+     console.log('Im Starting to Drag!')
+   });
 
    this.ul.appendChild(li);
 }.bind(this));
@@ -29,4 +30,4 @@ users.forEach(function(users, index){
 };
 
 
- //draggable="true" ondragstart="drag(event)"
+// ondragstart="event.dataTransfer.setData(\"text/plain\",null)"
