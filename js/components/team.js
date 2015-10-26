@@ -1,3 +1,26 @@
+// DRAG AND DROP FUNCTIONS
+
+function allowDrop(ev) {
+  console.log("I'm allowing dropping!");
+}
+
+function drag(ev) {
+    console.log("I'm dragging!");
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    var data = ev.dataTransfer.getData("text");
+    console.log(ev.target);
+    ev.target.appendChild(document.getElementById(data));
+    console.log(ev.target);
+    console.log("I'm putting it down now!");
+}
+
+
+//MENU BUILD FUNCTION
+
+
 var Menu = function(){
   this.list = [];
   //this.open = true;
@@ -16,7 +39,7 @@ var Menu = function(){
 
 
 // select the element with a class 'add' and make it open the form and focus the input field
-this.addForm.querySelectorAll('.add')[0].addEventListener('click', function(){
+  this.addForm.querySelectorAll('.add')[0].addEventListener('click', function(){
 
   var item = {
     content: this.addForm.querySelectorAll('input')[0].value
@@ -28,7 +51,7 @@ this.addForm.querySelectorAll('.add')[0].addEventListener('click', function(){
 }.bind(this));
 
 // listen for when the user types in the input
-this.addForm.querySelectorAll('input')[0].addEventListener('keydown',function(ev){
+  this.addForm.querySelectorAll('input')[0].addEventListener('keydown',function(ev){
   // if the user presses return
   if(ev.keyCode === 13) {
     // create a valid model for the data and set its content
@@ -51,12 +74,20 @@ Menu.prototype.addItem = function(item) {
   this.list.push(item);
   // create a li
   var listItem = document.createElement('li');
+
   // set the content of the li
   listItem.innerHTML = '<span>'+item.content+'</span>';
   // select the checkbox and listen for clicks
 
   // add a class for styling
   listItem.classList.add('menu-item');
+
+  // add drop tags
+  listItem.setAttribute("id","div1");
+  listItem.addEventListener('drop', function(){
+    console.log('hi');
+  }, false);
+  listItem.setAttribute("ondragover", allowDrop);
   // append the li
   this.ul.appendChild(listItem);
 

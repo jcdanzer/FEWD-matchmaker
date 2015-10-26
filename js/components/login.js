@@ -12,10 +12,10 @@ var xhr = new xhrHandler();
 
   xhr.request('POST','http://vvvvvv.club/api/login',loginInfo).then(function(res){
     console.log(res)
-    // if(res.status === 200){
-    //   console.log(res)
-    // }
-        window.location.pathname = '/views/team.html';
+    if(res.status === 200){
+      console.log(res)
+    }
+       window.location.pathname = '/views/team.html';
   });
 
   console.log("SENT TO API");
@@ -32,5 +32,4 @@ function getLoginValues(form){
 
 sendToApi ();
 
-//window.location.href = '/views/team.html';
 };
