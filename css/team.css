@@ -1,6 +1,8 @@
 body {
   font: #FFFFFF;
   font-family: 'open sans';
+  margin: 0px;
+  padding: 0px;
   -webkit-margin-before: 0em;
       -webkit-margin-after: 0em;
       -webkit-margin-start: 0px;
@@ -12,6 +14,7 @@ header h1 {
   font-size: 20px;
   background-color: #DCE0D9;
   height: 40px;
+  width: 100%;
   padding: 2%;
   text-align: center;
   font-weight: 300;
@@ -45,7 +48,7 @@ header h1 {
 
 #container {
   position: absolute;
-  width:1000%;
+  width:auto;
   height:100%;
   overflow-x:scroll;
   display: flex;
