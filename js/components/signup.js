@@ -21,12 +21,18 @@ function previewFile() {
  var http = new xhrHandler();
 
    console.log("HELLO");
-   var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo);
+   var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo).then(function(res){
+     console.log(res)
+     if(res.status === 200){
+       console.log(res)
+     }
+        window.location.pathname = '/views/team.html';
+   });
 
-  // window.location.pathname = '/views/team.html';
+   console.log("SENT TO API");
+
+
   };
-
-
 // GET VALUES FROM HTML FORM
 
 function getFormValues(){
