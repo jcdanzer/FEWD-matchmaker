@@ -12,10 +12,11 @@ var xhr = new xhrHandler();
 
   xhr.request('POST','http://vvvvvv.club/api/login',loginInfo).then(function(res){
     console.log(res);
-    if(res.status === 200){
+    if(res != "null"){
       console.log("IM READY TO GO TO TEAM PAGE!")
+      window.location.pathname = '/views/team.html';
     }
-      //window.location.pathname = '/views/team.html';
+    
   });
  };
 
