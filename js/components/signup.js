@@ -23,8 +23,10 @@ function previewFile() {
 
    console.log("HELLO");
    var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo).then(function(res){
-     if(res.status === 200){
-      window.location.pathname = '/index.html';}
+     console.log(res);
+     if(res.status === 200)
+     {
+      window.location.pathname = '/index.html'}
    });
 
   };

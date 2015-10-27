@@ -13,8 +13,10 @@ var Tiles = function(users){
 // CREATE EACH TILE WITH IMAGE AND username
 
 users.forEach(function(users, index){
-   var li = document.createElement('li');
 
+  if(users.avatar && users.avatar.image){
+   var li = document.createElement('li');
+   console.log(users);
 
    li.innerHTML = '<div class="avatar"><img id="drag'+index+'" src=http://vvvvvv.club'+users.avatar.image+' draggable="true"  ondragstart="drag(event)"></div><div class="email"><h2>&#64;'+users.username+'</h2></div>';
 
@@ -23,6 +25,7 @@ users.forEach(function(users, index){
    });
 
    this.ul.appendChild(li);
+  }
 }.bind(this));
 
 //POST ELEMENTS TO PAGE

@@ -40,7 +40,8 @@ console.log(xhr.status);
             try{
               // try to parse the response as JSON
               resp = JSON.parse(xhr.responseText);
-console.log(resp);
+              resolve(resp);
+//console.log(resp);
             }
             catch(error){
               // if the parse fails, print the response
