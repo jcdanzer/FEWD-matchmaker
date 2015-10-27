@@ -14,7 +14,7 @@ function drag(ev) {
 function drop(ev) {
     var data = ev.dataTransfer.getData("data");
     ev.target.appendChild(document.getElementById(data));
-    console.log("Drop it like it's hot!")
+    
 }
 
 
