@@ -24,7 +24,7 @@ function previewFile() {
    console.log("HELLO");
    var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo).then(function(res){
      console.log(res);
-     if(res.status === 200)
+     if(res != "null")
      {
       window.location.pathname = '/index.html'}
    });
