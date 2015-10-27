@@ -18,10 +18,16 @@ function previewFile() {
  };
 
  function sendToApi(){
- var http = new xhrHandler();
+
+   var http = new xhrHandler();
 
    console.log("HELLO");
-   var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo);
+   var req = http.request('POST','http://vvvvvv.club/api/user', signupInfo).then(function(res){
+     console.log(res);
+     if(res.status === 200)
+     {
+      window.location.pathname = '/index.html'}
+   });
 
   };
 
@@ -29,7 +35,6 @@ function previewFile() {
 // GET VALUES FROM HTML FORM
 
 function getFormValues(){
-  console.log('in form');
 
 signupInfo.email = document.getElementById('email').value;
 signupInfo.username = document.getElementById('username').value;
@@ -37,7 +42,5 @@ signupInfo.password = document.getElementById('password').value;
 signupInfo.firstName = document.getElementById('firstName').value;
 signupInfo.lastName = document.getElementById('lastName').value;
 
-console.log(signupInfo);
 sendToApi ();
-//window.location.href = '/views/team.html';
 };

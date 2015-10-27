@@ -1,10 +1,13 @@
-body {
-  font: #FFFFFF;
-  font-family: 'open sans';
+* {
   -webkit-margin-before: 0em;
       -webkit-margin-after: 0em;
       -webkit-margin-start: 0px;
       -webkit-margin-end: 0px;
+}
+
+body {
+  font: #FFFFFF;
+  font-family: 'open sans';
 }
 
 header h1 {
@@ -20,16 +23,28 @@ header h1 {
       -webkit-margin-after: 0em;
       -webkit-margin-start: 0px;
       -webkit-margin-end: 0px;
+
 }
 
 #triangle {
-  background-image: url("../images/pattern_matchmaker.svg");
+  background-image: url("../images/pattern.svg");
   background-repeat: no-repeat;
+  height: 250px;
 }
 
+#triangle2 {
+  background-image: url("../images/pattern.svg");
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
 .one {
   float: right;
-  width: 30%;
+  max-width: 30%;
   position: relative;
   color: white;
   padding-right: 5%;
@@ -37,35 +52,79 @@ header h1 {
 
 .one h3 {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 15px;
+  line-height: 60px;
 }
 
 .one p {
   font-weight: 300;
-  font-size: 15px;
+  font-size: 13px;
 }
 
-.one ul li {
+.one li {
   display: inline-block;
+  margin-left: -40px;
+  margin-right: 8%;
 }
 
 .button {
   background-color: #BC261D;
   border-radius: 5px;
-  padding: 5px;
+  padding: 5px 30px;
   font-weight: 300;
-  font-size: 15px;
-  margin: 9px;
-
+  font-size: 13px;
+  text-align: center;
+  margin-top: 15%;
+  margin-right: 30px;
+  margin-left: 0;
 }
 
+.center h2 {
+  font-weight: 300;
+  font-size: 28px;
+  text-align: center;
+  position: relative;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
 
 .two {
-  width: 100%;
+  color: #FFFFFF;
+  font-weight: 300;
+  float: left;
+}
+
+.two ul li{
+display: inline-block;
+  width: 22%;
+  padding: 0% 5%;
+}
+
+.button2 {
+  background-color: #BC261D;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 300;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 7%;
+}
+
+.two h3 {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 60px;
+}
+
+.two p {
+  font-weight: 300;
+  font-size: 13px;
+}
+
+footer {
+  text-align: center;
+  padding: 2% 0;
   position: relative;
-  padding-top: 10%;
-
-
 }
 
 .clearfix:after {

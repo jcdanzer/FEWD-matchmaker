@@ -8,15 +8,15 @@ function sendToApi(){
 
 var xhr = new xhrHandler();
 
-  console.log("HELLO");
+  console.log("HELLO LOGIN STARTING");
 
-  xhr.request('POST','http://vvvvvv.club/api/login',loginInfo);
-
-  console.log("SENT TO API");
-  console.log(loginInfo);
-
-
-
+  xhr.request('POST','http://vvvvvv.club/api/login',loginInfo).then(function(res){
+    console.log(res);
+    if(res.status === 200){
+      console.log("IM READY TO GO TO TEAM PAGE!")
+    }
+      //window.location.pathname = '/views/team.html';
+  });
  };
 
 // GET VALUES FROM HTML FORM
@@ -28,5 +28,5 @@ function getLoginValues(form){
 
 sendToApi ();
 
-//window.location.href = '/views/team.html';
+
 };

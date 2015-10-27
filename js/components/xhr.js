@@ -36,11 +36,12 @@ console.log(xhr.status);
           }
           // if the response returns 200 OK
           if (xhr.status === 200) {
-console.log(xhr.readyState);
+console.log(xhr.status);
             try{
               // try to parse the response as JSON
               resp = JSON.parse(xhr.responseText);
-console.log(resp);
+              resolve(resp);
+//console.log(resp);
             }
             catch(error){
               // if the parse fails, print the response
