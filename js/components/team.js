@@ -1,6 +1,10 @@
 
 // DRAG AND DROP FUNCTIONS
 
+function allowDrop(ev) {
+    ev.preventDefault();
+    console.log("Allowing Drop")
+}
 
 function drag(ev) {
     ev.dataTransfer.setData("data", ev.target.id);
@@ -81,7 +85,8 @@ Menu.prototype.addItem = function(item) {
 
   // add drop tags
   listItem.setAttribute("id","div1");
-//  listItem.setAttribute("ondrop", drop(event));
+  listItem.setAttribute("ondrop", "drop(event)");
+  listItem.setAttribute("ondragover", "allowDrop(event)");
   // append the li
   this.ul.appendChild(listItem);
 
